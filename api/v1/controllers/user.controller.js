@@ -144,7 +144,7 @@ module.exports.resetPassword=async(req,res)=>{
   });
 }
 
-//[POST] /api/v1/user/detail
+//[GET] /api/v1/user/detail
 module.exports.detail=async(req,res)=>{
   res.json({
     code:200,
@@ -152,7 +152,7 @@ module.exports.detail=async(req,res)=>{
     info:res.locals.user
   });
 }
-//[POST] /api/v1/user/list
+//[GET] /api/v1/user/list
 module.exports.list=async(req,res)=>{
   const users=await User.find({
     deleted:false

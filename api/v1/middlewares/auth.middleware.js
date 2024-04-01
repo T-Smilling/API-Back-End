@@ -26,8 +26,9 @@ module.exports.requireAuth=async (req,res,next) =>{
       });
     }
   } catch (error) {
+    console.log(error);
     res.json({
-      code:400,
+      code:401,
       message:"Không có quyền truy cập!"
     });
   }

@@ -67,6 +67,7 @@ module.exports.changeStatus=async(req,res)=>{
       massage:"Cập nhật trạng thái thành công!"
     });
   } catch (error) {
+    console.log(error);
     res.json({
       code:400,
       massage:"Cập nhật trạng thái thất bại!"
